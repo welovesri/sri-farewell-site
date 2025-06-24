@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: url('assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+/* Semi-transparent pink overlay */
+.overlay {
+  background-color: rgba(255, 240, 245, 0.85);
+  width: 100%;
+  height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title Styling */
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5em;
+  color: #ff69b4;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.3em;
+  color: #cc6699;
+  margin-bottom: 30px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Button Container */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Individual Button Style */
+.btn {
+  background-color: #fff0f5;
+  padding: 15px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #ff1493;
+  font-weight: bold;
+  border: 2px solid #ffb6c1;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 350px;
+}
+
+.btn:hover {
+  background-color: #ffe6f0;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Animation Keyframe */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .overlay {
+    padding: 20px 10px;
+    justify-content: flex-start;
+  }
+
+  .btn {
+    font-size: 0.95em;
+    padding: 12px 20px;
+  }
+}
+.overlay-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center; /* 👈 Align both sides vertically */
+}
+
+
+.carousel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 👈 vertically center image inside */
+  background-color: rgba(255, 240, 245, 0.6);
+  padding: 40px 0; /* optional spacing */
+}
+
+
+
+.carousel-img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+  height: auto;
+  transition: opacity 0.5s ease;
+    margin-top: 120px; /* 👈 This moves the image down */
+
+}
+
+/* Adjust overlay to right side */
+.overlay {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Responsive: Stack vertically on mobile */
+@media (max-width: 768px) {
+  .overlay-container {
+    flex-direction: column;
+  }
+
+  .carousel, .overlay {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel-img {
+    width: 90%;
+      margin-top: 20px; /* adjust if needed */
+
+  }
+}

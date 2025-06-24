@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timeline of Memories 💭</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+  body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    padding: 0;
+    background: url('assets/bg-timeline.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+
+  .overlay {
+    background-color: rgba(247, 189, 208, 0.88); /* semi-transparent pink */
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 600px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ffb6c1;
+  }
+
+  .entry {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 50px;
+  }
+
+  .entry::before {
+    content: '🌸';
+    position: absolute;
+    left: -5px;
+    top: 0;
+    font-size: 1.5em;
+  }
+
+  .entry h3 {
+    margin: 0;
+    color: #cc3366;
+    font-size: 1.2em;
+  }
+
+  .entry p {
+    margin: 5px 0 0;
+  }
+
+  .back {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    color: #ff1493;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .entry {
+      padding-left: 40px;
+    }
+
+    .entry::before {
+      left: -10px;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <div class="overlay">
+
+    <h1>Heartfelt Memories</h1>
+
+    <div class="timeline">
+      <div class="entry">
+        <h3>First Time We Met On Instagram 🫣</h3>
+        <p>Remember we had like conversation on suits for 3 days and that's how we started talking 😅</p>
+      </div>
+
+      <div class="entry">
+        <h3>Yappative Days 🗣</h3>
+        <p> Almost every other day we would call and we would talk stuff that makes absolutely no sense </p>
+      </div>
+
+      <div class="entry">
+        <h3>Inside joke: “SRIgga?!” 😛</h3>
+        <p>No explanation needed 😂</p>
+      </div>
+
+      <div class="entry">
+        <h3>Everytime we meet in person 🎉</h3>
+        <p>Biggest Chaos Ever😆</p>
+      </div>
+
+      <div class="entry">
+        <h3>And Now you're leaving🥹</h3>
+        <p>Ain't a memory but whatever sri.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back">← Back to Home</a>
+
+  </div>
+</body>
+
+</html>
